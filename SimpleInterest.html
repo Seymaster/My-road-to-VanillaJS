@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div style="color:rgb(70, 49, 90)">
+        <h2 align="center" style="color:blue"><u>Simple Interest Calculator</u></h2>
+         <!-- For the inputs  -->
+        <input type="number" id="txt1" placeholder="Principal">
+        <input type="number" id="txt2" placeholder="Rate">
+        <input type="number" id="txt3" placeholder="Time">
+        <!-- For the output -->
+        <p align="center"><input type="button" value="Calculate" onclick="SI();"></p>
+        </div>
+    <script>
+        // To carry out the output function
+        function SI(){
+        var principal = document.getElementById("txt1").value;
+        var rate = document.getElementById("txt2").value;
+        var time = document.getElementById("txt3").value;
+        var calc1 = principal * rate * time / 100
+        alert("The Result is "+ calc1);
+        }
+    </script>
+</body>
+</html>

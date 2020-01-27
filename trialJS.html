@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label for="theme">Select Theme</label>
+    <select>
+        <option value="">-- Select a theme</option>
+        <option value="Black">Black</option>
+        <option value="White">White</option>
+    </select>
+    <h1>In Addy to me YAY</h1>
+    <h3 id = "trial"></h3>
+    <input type="text" id ="myInput" value="My Name">
+    <input type="button" value="submit">
+
+    <h2 align="center" style="color:blue"><u>Simple Interest Program</u></h2>
+    <input type="number" id="txt1" placeholder="Principal">
+    <input type="number" id="txt2" placeholder="Rate">
+    <!-- <input type="number" id="txt3" placeholder="Time"> -->
+    <p align="center"><input type="button" id="btn1" value="Calculate" onclick="SI();"></p>
+    <p id="si" align="center"></p>
+
+    <input type="txt" name="answer">
+    <button id ="_homie1">2</button>
+    <button id ="_homie3">3</button>
+    <button id="_homie2" onclick="multiply();">multiply</button>
+    
+    <script>
+        function multiply(a,b){
+            return a + b;
+        
+        }
+
+        var countDownDate = new Date("Dec 28, 2019 00:00:00").getTime();
+        var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000*60*60*24));
+        var hours = Math.floor((distance % (1000 *60*60*24)) / (1000*60*60));
+        var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+        var seconds = Math.floor((distance % (1000*60)) / 1000);
+        document.getElementById("trial").innerHTML = days + "days " + ":" + hours + "hours " + ":" + minutes + "minutes "  + ":" + seconds + "seconds";
+        if (distance < 0){
+            clearInterval(x);
+        document.getElementById("trial").innerHTML ="Happy Birthday";
+        }
+            }, 1000);
+        var select = document.querySelector('select')
+        var html = document.querySelector('html')
+        function updatetheme(){
+            var color = select.value;
+            if(color === "White"){
+            html.style.backgroundColor='white';
+            html.style.color='black';
+            }
+            else if(color ==='Black'){
+            html.style.backgroundColor='black';
+            html.style.color='white';
+            }
+        }
+        select.addEventListener('change',updatetheme);
+
+        function SI(){
+                var principal = document.getElementById("txt1").value;
+                var rate = document.getElementById("txt2").value;
+                // var time = document.getElementById("txt3").value;
+                var calc1 = principal * rate;
+                alert(calc1);
+            }
+
+                document.getElementById("si".innerHTML="THE SIMPLE INTEREST IS "+ calc1)
+
+        // function Hello(){
+        //         var name = "Abiodun";
+        //         var food = "Rice";
+        //         alert(name + food);
+        //     }
+        //     Hello();
+        // function Palindrome(x){
+//     if(x === x.split("").reverse().join('')){
+//         return true
+//     }
+//     else{
+//         return false
+//     }
+// } 
+// console.log(Palindrome("lol"))
+        // var score = prompt("Please enter your score ?");
+        // score = parseInt(score)
+        // var grade;
+        // switch (score){
+        //     case score > 80 && score < 100 :
+        //     grade = "A";
+        //     break;
+        
+    </script>
+</body>
+</html>

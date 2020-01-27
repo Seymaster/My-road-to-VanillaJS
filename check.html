@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num1" >
+    <input type="button" onclick="check()" id="num2" value="check"><br><br>
+
+    <input type="text" id="outpt1">
+    <input type="button" onclick="details()" id="outpt2" value="search">
+    
+
+    <script>
+        var names = {
+            Emeka : ['Emeka Imoh','fara park,Awoyaya','08134255162'],
+            Emmanuel : ['Emmanuel Samuel','golden park Estate','09036771223'],
+            Chisoba : ['Chisoba shizi','Readington,oloko nla','07035526722'],
+            Junior : ['Emmanuel Chris','Crownview Estate,Lakowe','08065655343'],
+            Mercy : ['Mercy Godwin','DKK area,Sangotedo','08033636726']
+        }
+        function details(){
+            // var firstly = document.querySelector('#outpt2').value;
+            // for(name in names){
+            //     names[name].find((m) => {
+            //         if(secondly == m){
+                        alert(names);
+                    }
+            //     })
+            // }
+            //     }
+
+            var numbers = {
+                mtn : ['0703','0706','0803','0806','0813','0816'],
+                glo : ['0805','0705','0815','0814'],
+                airtel : ['0802','0808','0812','0708','0702']
+                }
+            function check(){
+                var trial = document.getElementById('num1').value;
+                var prefix = trial.slice(0,4);
+                for(number in numbers){
+                    numbers[number].find((n) => {
+                        if(prefix === n){
+                            alert(number);
+                    }
+                    })
+                }
+            }
+    </script>
+</body>
+</html>

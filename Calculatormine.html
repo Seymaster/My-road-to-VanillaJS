@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form name="calc">
+        <!-- This is for the output display -->
+        <div id="answer"><p><input type="text" readonly id="_output" name="out1"></p></div>
+        <div id="one">
+        <div class="a"></div>
+        <div class="b"><input type="reset" value="C" /></div>
+        </div>
+        <!-- This are the keys for inputting on the calculator -->
+        <div><input type="button" value="1" id="btn1"  onclick="display(btn1.value)" /></div>
+        <div><input type="button" value="2" id="btn2" onclick="display(btn2.value)" /></div>
+        <div><input type="button" value="3" id="btn3" onclick="display(btn3.value)"/></div>
+        <div><input type="button" value="4" id="btn4" onclick="display(btn4.value)"/></div>
+        <div><input type="button" value="5" id="btn5" onclick="display(btn5.value)"/></div>
+        <div><input type="button" value="6" id="btn6" onclick="display(btn6.value)"/></div>
+        <div><input type="button" value="7" id="btn7"  onclick="display(btn7.value)"/></div>
+        <div><input type="button" value="8" id="btn8" onclick="display(btn8.value)"/></div>
+        <div><input type="button" value="9" id="btn9" onclick="display(btn9.value)"/></div>
+        <div><input type="button" value="0" name="btn0" onclick="display(btn0.value)"/></div>
+        <div><input type="button" value="*" name="btnb" onclick="display(btnb.value)"/></div>
+        <div><input type="button" value="/" id="btnd" onclick="display(btnd.value)"/></div>
+        <div><input type="button" value="-" name="btns" onclick="display(btns.value)" /></div>
+        <div><input type="button" value="+" name="btna" onclick="display(btna.value)" /></div>
+        <div><input type="button" value="="  name="btne" onclick="out1.value=eval(out1.value)"/></div>
+    </form>
+    <script>
+        // This displays the output on the input text
+    function display(n){
+        calc.out1.value=calc.out1.value+n;
+    }
+    </script>
+</body>
+</html>

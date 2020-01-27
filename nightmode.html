@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Framing</title>
+        <style type="text/css">
+        #si{
+            font-family: cursive;
+            font-size: 200%;
+            font-weight: bold;
+        }
+        </style>
+    
+    </head>
+    <body> 
+        <!-- This is to select the theme color, you did like to use  -->
+        <select>
+            <option value="">-- Select a theme</option>
+            <option value="Black">Nightmode</option>
+            <option value="White">White</option>
+        </select>
+
+        <div>
+            <p id="si" align="center"></p>
+        </div>
+        <input type="number" id="num1">
+        <input type="button" onclick="check()" id="num2" value="check">
+        <script>
+            var numbers = {
+                mtn : ['0703','0706','0803','0806','0813','0816'],
+                glo : ['0805','0705','0815','0814'],
+                airtel : ['0802','0808','0812','0708','0702']
+                }
+            function check(){
+                var trial = document.getElementById('num2').value;
+                var prefix = trial.slice(0,4);
+                for(number in numbers){
+                    numbers[number].find((n) => {
+                        if(prefix == n){
+                            alert(number)}
+                        else{
+                            alert(unknown)
+                        }
+                    
+                    });
+                }
+            }
+
+            var select = document.querySelector('select')
+            var html = document.querySelector('html')
+            function updatetheme(){
+                var color = select.value;
+                if(color === "White"){
+                html.style.backgroundColor='white';
+                html.style.color='black';
+            }
+                else if(color ==='Black'){
+}
+            select.addEventListener('change',updatetheme);
+        
+            
+        </script>
+    
+
+
+
+
+    </body>
+  
+
+
+
+
+</html>
